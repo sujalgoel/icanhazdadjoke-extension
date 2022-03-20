@@ -1,0 +1,15 @@
+{
+	"name": "Dad Jokes",
+	"version": "3.0",
+	"manifest_version": 3,
+	"description": "Get a new dad joke every time you open a new tab.",
+	"permissions": ["tabs", "activeTab"],
+	"icons": {
+		"16": "assets/icanhazdadjoke.png",
+		"32": "assets/icanhazdadjoke.png",
+		"64": "assets/icanhazdadjoke.png"
+	},
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	}
+}

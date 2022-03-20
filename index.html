@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dad Joke | Sujal Goel</title>
+
+  <meta name="description" content="Get a new dad joke every time you open a new tab." />
+
+  <link rel=icon href="./assets/icanhazdadjoke.png" />
+  <link rel="apple-touch-icon" href="./assets/icanhazdadjoke.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+
+  <style>
+    :root {
+      --primary-color: white;
+    }
+
+    * {
+      outline: none;
+      user-zoom: none;
+      overflow: hidden;
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+    }
+
+    body {
+      opacity: 0;
+      height: 85vh;
+      width: 100vw;
+      display: flex;
+      font-size: 75%;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .joke {
+      font-size: 3vw;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 1px;
+      color: var(--primary-color);
+    }
+
+    #broughtToYouBy {
+      font-size: 14px;
+      font-weight: bold;
+      position: absolute;
+      transition: all 0.25s ease;
+      color: var(--primary-color);
+    }
+
+    #broughtToYouByURL:before {
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+      background-color: var(--primary-color);
+    }
+
+    #broughtToYouByURL {
+      position: relative;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    #broughtToYouByURL:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+
+    #broughtToYouByURL:hover {
+      opacity: 0.6;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body id="background">
+  <div class="container">
+    <h1 class="joke"></h1>
+    <p id="broughtToYouBy">Laughs brought to you by
+      <a id="broughtToYouByURL">icanhazdadjoke</a> | Made by <a id="broughtToYouByURL">Sujal Goel</a>
+    </p>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
